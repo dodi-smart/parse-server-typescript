@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "declaration": false,
+        "experimentalDecorators": true,
+        "lib": [
+            "es2019"
+        ],
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "outDir": "dist",
+        "target": "es6",
+        "esModuleInterop": true
+    },
+    "exclude": [
+        "test",
+        "dist"
+    ]
+}
