@@ -14,7 +14,7 @@
         "express": "^4.17.1",
         "graphql": "15.5.1",
         "parse-dashboard": "~2.1.0",
-        "parse-server": "~4.5.0",
+        "parse-server": "https://github.com/dodi-smart/parse-server#4.5.0-dodi.1",
         "throng": "^5.0.0",
         "winston": "3.3.3"
     },
@@ -48,9 +48,7 @@
         "unit": "jest --config tests/unit/jest.config.js",
         "integration": "PARSE_SILENT=true ./tests/run_integration_tests.sh",
         "test": "yarn lint && yarn build && yarn unit && yarn integration",
-        "coverage": "nyc --silent yarn integration && nyc report",
-        "snyk-protect": "snyk protect",
-        "prepare": "yarn snyk-protect"
+        "coverage": "nyc --silent yarn integration && nyc report"
     },
     "engines": {
         "node": "14.15.4",
