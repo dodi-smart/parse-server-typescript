@@ -1,5 +1,4 @@
-import bodyParser from 'body-parser'
-import { Request, Response, Application } from 'express'
+import { Request, Response, Application, raw } from 'express'
 
 export class Cloud {
     static async init(): Promise<void> {
@@ -11,7 +10,7 @@ export class Cloud {
 
 export class Webhooks {
     static async init(app: Application): Promise<void> {
-        app.post('/webhooks/test', bodyParser.raw({ type: 'application/json' }), (request: Request, response: Response) => {
+        app.post('/webhooks/test', raw({ type: 'application/json' }), (request: Request, response: Response) => {
             response.status(200).json({})
         })
     }

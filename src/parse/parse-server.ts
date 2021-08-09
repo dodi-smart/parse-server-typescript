@@ -1,8 +1,7 @@
 import config from './config'
 import ParseServer, { ParseGraphQLServer } from 'parse-server';
-import { buildSchemas } from './schema';
-import { UserSchema } from '../schema/User.schema';
 import logger from './logger';
+import { schemas } from '../schema';
 
 const verbose = config.PARSE_LOG_VERBOSE || false,
     silent = config.PARSE_SILENT || false,
@@ -22,8 +21,9 @@ const parseServer = new ParseServer({
     verbose: verbose,
     loggerAdapter: logger,
     allowClientClassCreation: false,
-    serverStartComplete: async () => {
-        await buildSchemas([UserSchema])
+    migrations: {
+        strict: true,
+        schemas: schemas,
     },
 })
 

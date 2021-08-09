@@ -1,6 +1,6 @@
-// Follow the JSON structure from REST API https://docs.parseplatform.org/rest/guide/#schema
-export const UserSchema = {
-    className: '_User',
+import { SchemaMigrations } from 'parse-server'
+
+export default SchemaMigrations.makeSchema('_User', {
     fields: {
         objectId: { type: 'String' },
         createdAt: {
@@ -25,21 +25,15 @@ export const UserSchema = {
         phone: { type: 'String' },
     },
     indexes: {
-        objectId: { objectId: 1 },
         type: { type: 1 },
         lastname: { lastname: 1 },
     },
     classLevelPermissions: {
-        find: { requiresAuthentication: true },
-        count: { requiresAuthentication: true },
-        get: { requiresAuthentication: true },
+        ...SchemaMigrations.CLPHelper.requiresAuthentication([
+            'find', 'count', 'get'
+        ]),
         update: { 'role:Admin': true },
-        create: { '*': true },
         delete: { 'role:Admin': true },
-        addField: {},
-        protectedFields: {
-            // @ts-ignore
-            'role:Admin': [],
-        },
+        create: { '*': true },
     },
-}
+})
