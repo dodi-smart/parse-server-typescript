@@ -13,8 +13,8 @@
         "dotenv": "^10.0.0",
         "express": "^4.17.1",
         "graphql": "15.5.1",
-        "parse-dashboard": "~2.1.0",
-        "parse-server": "https://github.com/dodi-smart/parse-server#4.5.0-dodi.2"
+        "parse-dashboard": "parse-community/parse-dashboard#master",
+        "parse-server": "dodi-smart/parse-server#4.5.0-dodi.2"
     },
     "devDependencies": {
         "@types/express": "^4.17.13",
