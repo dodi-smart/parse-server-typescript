@@ -1,5 +1,5 @@
-describe('example unit test', () => {
-    it('1 + 1 = 2', () => {
-        expect(1 + 1).toEqual(2)
-    })
-})
+describe("example unit test", () => {
+    it("1 + 1 = 2", () => {
+        expect(1 + 1).toEqual(2);
+    });
+});

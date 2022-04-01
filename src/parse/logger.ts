@@ -1,16 +1,16 @@
-import { createLogger, format, transports } from 'winston';
+import { createLogger, format, transports } from "winston";
 
 const myFormat = format.printf(({ level, message, timestamp }) => {
     return `${timestamp} [${level}]: ${message}`;
 });
 
 const logger = createLogger({
-    level: 'debug',
+    level: "debug",
     format: format.combine(
         format.colorize(),
-        format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss.SSS' }),
+        format.timestamp({ format: "YYYY-MM-DD HH:mm:ss.SSS" }),
         format.splat(),
-        myFormat,
+        myFormat
     ),
     transports: [new transports.Console()],
 });

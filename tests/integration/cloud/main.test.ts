@@ -1,13 +1,13 @@
-import { Parse } from '../parseConfig/parse.setup'
+import { Parse } from "../parseConfig/parse.setup";
 
-describe('threadTest', () => {
-    let threadTestResponse: string
+describe("threadTest", () => {
+    let threadTestResponse: string;
 
     beforeEach(async () => {
-        threadTestResponse = await Parse.Cloud.run('threadTest')
-    })
+        threadTestResponse = await Parse.Cloud.run("threadTest");
+    });
 
     it('returns "test" string', () => {
-        expect(threadTestResponse).toEqual('test')
-    })
-})
+        expect(threadTestResponse).toEqual("test");
+    });
+});

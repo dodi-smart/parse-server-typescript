@@ -5,10 +5,8 @@ export type VersionedFunction = (req: Parse.Cloud.JobRequest | Parse.Cloud.Funct
 // otherwise will run the default
 export function versioned(implementations: { [x: string]: VersionedFunction; default: VersionedFunction }) {
     return function (req: Parse.Cloud.JobRequest | Parse.Cloud.FunctionRequest): Promise<void> {
-        const { version } = req.params
-        const impl = implementations[version] || implementations.default
-        return impl(req)
-    }
+        const { version } = req.params;
+        const impl = implementations[version] || implementations.default;
+        return impl(req);
+    };
 }
-
-

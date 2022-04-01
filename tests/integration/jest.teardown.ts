@@ -1,5 +1,5 @@
-import { parseTeardown } from './parseConfig/parse.teardown'
+import { parseTeardown } from "./parseConfig/parse.teardown";
 
 export default async () => {
-    await parseTeardown()
-}
+    await parseTeardown();
+};

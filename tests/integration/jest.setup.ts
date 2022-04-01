@@ -1,3 +1,3 @@
-import './parseConfig/parse.setup'
+import "./parseConfig/parse.setup";
 
-jest.setTimeout(15000)
+jest.setTimeout(15000);

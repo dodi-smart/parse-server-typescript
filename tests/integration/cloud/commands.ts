@@ -1,3 +1,3 @@
 export const clearParseTestData = async () => {
-    return true
-}
+    return true;
+};
