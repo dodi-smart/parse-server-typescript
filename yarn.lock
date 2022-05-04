@@ -6348,10 +6348,10 @@ parse-json@^5.0.0, parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-server@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.2.0.tgz#dc907ee9bfa15d8dce488ab8886c58ab65c402d0"
-  integrity sha512-SJ5QmncAecNKyamZwuusjZrUnMGQbYxT9IOIpdxAqQmBGQt+7eo/la+Kz4MEwx5YP9CaC34cbGKuU8IdAZr61Q==
+parse-server@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.2.1.tgz#e1a880ea64e18232a4b864a0e755af4b52e8b32d"
+  integrity sha512-UMtmJsYfP4gvcBVXPU1gfPEMrh/S0SdRKvV3MLXxMzsTNBosltaj9ZRTq+Mb1EqPHEdOcW8nt1Bc7jx2XvT/eA==
   dependencies:
     "@apollo/client" "3.5.8"
     "@apollographql/graphql-playground-html" "1.6.29"
