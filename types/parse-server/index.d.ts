@@ -30,7 +30,7 @@ declare namespace Parse {
         export interface FieldType {
             type: FieldValueType;
             required?: boolean;
-            defaultValue?: any;
+            defaultValue?: number | string | boolean | unknown;
             targetClass?: string;
         }
 
@@ -49,10 +49,13 @@ declare namespace Parse {
         }
 
         export type CLPOperation = "find" | "count" | "get" | "update" | "create" | "delete";
-        export type CLPPermission = "requiresAuthentication" | "*" | `user:${string}` | `role:${string}`;
+        type CLPPermission =
+            | "requiresAuthentication"
+            | "*"
+            | /* @Typescript 4.1+ `user:${string}` | `role:${string}` */ string;
 
         type CLPValue = { [key: string]: boolean };
-        type CLPData = { [key: string]: CLPOperation[] & CLPPermission[] };
+        type CLPData = { [key: string]: CLPOperation[] };
         type CLPInterface = { [key: string]: CLPValue };
 
         export interface JSONSchema {
@@ -72,9 +75,9 @@ declare namespace Parse {
         }
 
         export class CLP {
-            static allow(perms: { [key: string]: CLPData }): CLPInterface;
+            static allow(perms: CLPData): CLPInterface;
         }
 
-        export function makeSchema(className: ClassNameType, schema: JSONSchema): JSONSchema;
+        function makeSchema(className: ClassNameType, schema: Omit<JSONSchema, "className">): JSONSchema;
     }
 }
