@@ -1,10 +1,17 @@
 // This file contain duplicate types from Parse-Server that are not yet updated
-
 declare module "parse-server";
 
-declare module "parse-server" {
-    export namespace SchemaMigrations {
-        export type CLPType = "*" | ("find" | "count" | "get" | "update" | "create" | "delete") /*| 'addField'*/[];
+declare namespace Parse {
+    export namespace Migrations {
+        export interface SchemaOptions {
+            definitions: JSONSchema[];
+            strict: boolean | undefined;
+            deleteExtraFields: boolean | undefined;
+            recreateModifiedFields: boolean | undefined;
+            lockSchemas: boolean | undefined;
+            beforeMigration: (() => void | Promise<void>) | undefined;
+            afterMigration: (() => void | Promise<void>) | undefined;
+        }
 
         export type FieldValueType =
             | "String"
@@ -20,28 +27,17 @@ declare module "parse-server" {
             | "Object"
             | "ACL";
 
-        interface FieldInterface {
+        export interface FieldType {
             type: FieldValueType;
-            targetClass?: string;
             required?: boolean;
             defaultValue?: any;
+            targetClass?: string;
         }
 
         type ClassNameType = "_User" | "_Role" | string;
 
-        export interface CLPInterface {
-            requiresAuthentication?: boolean;
-            "*"?: boolean;
-            pointerFields?: string[];
-            [key: string]: boolean | string[];
-        }
-
         export interface ProtectedFieldsInterface {
             [key: string]: string[];
-        }
-
-        interface FieldsInterface {
-            [key: string]: FieldInterface;
         }
 
         export interface IndexInterface {
@@ -52,43 +48,33 @@ declare module "parse-server" {
             [key: string]: IndexInterface;
         }
 
-        export interface MigrationsOptions {
-            schemas: JSONSchema[];
-            strict: boolean;
-            deleteExtraFields: boolean;
-            recreateModifiedFields: boolean;
-        }
+        export type CLPOperation = "find" | "count" | "get" | "update" | "create" | "delete";
+        export type CLPPermission = "requiresAuthentication" | "*" | `user:${string}` | `role:${string}`;
 
-        interface CPLInterface {
-            requiresAuthentication?: boolean;
-            "*"?: boolean;
-            pointerFields?: string[];
-            [key: string]: boolean | string[];
-        }
-
-        export interface CPLsInterface {
-            find?: CPLInterface;
-            count?: CPLInterface;
-            get?: CPLInterface;
-            update?: CPLInterface;
-            create?: CPLInterface;
-            delete?: CPLInterface;
-            addField?: CPLInterface;
-            protectedFields?: ProtectedFieldsInterface;
-        }
+        type CLPValue = { [key: string]: boolean };
+        type CLPData = { [key: string]: CLPOperation[] & CLPPermission[] };
+        type CLPInterface = { [key: string]: CLPValue };
 
         export interface JSONSchema {
-            fields: FieldsInterface;
-            indexes: IndexesInterface;
-            classLevelPermissions: CPLsInterface;
+            className: ClassNameType;
+            fields?: { [key: string]: FieldType };
+            indexes?: IndexesInterface;
+            classLevelPermissions?: {
+                find?: CLPValue;
+                count?: CLPValue;
+                get?: CLPValue;
+                update?: CLPValue;
+                create?: CLPValue;
+                delete?: CLPValue;
+                addField?: CLPValue;
+                protectedFields?: ProtectedFieldsInterface;
+            };
         }
 
-        export class CLPHelper {
-            static requiresAuthentication(ops: CLPType): CPLsInterface;
-
-            static requiresAnonymous(ops: CLPType): CPLsInterface;
+        export class CLP {
+            static allow(perms: { [key: string]: CLPData }): CLPInterface;
         }
 
-        function makeSchema(className: ClassNameType, schema: Omit<JSONSchema, "className">): JSONSchema;
+        export function makeSchema(className: ClassNameType, schema: JSONSchema): JSONSchema;
     }
 }

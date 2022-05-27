@@ -1,6 +1,5 @@
-import { SchemaMigrations } from "parse-server";
-
-export default SchemaMigrations.makeSchema("_User", {
+export default {
+    className: "_User",
     fields: {
         objectId: { type: "String" },
         createdAt: {
@@ -29,9 +28,11 @@ export default SchemaMigrations.makeSchema("_User", {
         lastname: { lastname: 1 },
     },
     classLevelPermissions: {
-        ...SchemaMigrations.CLPHelper.requiresAuthentication(["find", "count", "get"]),
+        get: { requiresAuthentication: true },
+        find: { requiresAuthentication: true },
+        count: { requiresAuthentication: true },
         update: { "role:Admin": true },
         delete: { "role:Admin": true },
         create: { "*": true },
     },
-});
+} as Parse.Migrations.JSONSchema;
