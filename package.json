@@ -12,15 +12,15 @@
     "dependencies": {
         "dotenv": "^16.0.0",
         "express": "^4.18.1",
-        "graphql": "16.4.0",
+        "graphql": "16.5.0",
         "parse-dashboard": "^4.1.1",
-        "parse-server": "~5.2.1"
+        "parse-server": "^5.2.1"
     },
     "devDependencies": {
         "@types/express": "^4.17.13",
         "@types/jest": "^27.5.0",
-        "@types/node": "~16.4.13",
-        "@types/parse": "~2.18.14",
+        "@types/node": "^16.4.13",
+        "@types/parse": "^2.18.14",
         "@types/throng": "^5.0.3",
         "@typescript-eslint/eslint-plugin": "^5.22.0",
         "@typescript-eslint/parser": "^5.22.0",
@@ -29,14 +29,14 @@
         "eslint-plugin-import": "^2.26.0",
         "jest": "^28.1.0",
         "nyc": "^15.1.0",
-        "parse": "~3.4.2",
+        "parse": "^3.4.2",
         "ts-jest": "^28.0.2",
         "ts-loader": "^9.3.0",
         "ts-node": "^10.7.0",
         "typescript": "^4.6.4"
     },
     "resolutions": {
-        "graphql": "16.4.0"
+        "graphql": "16.5.0"
     },
     "scripts": {
         "dev": "TS_NODE_FILES=true node --require ts-node/register --trace-warnings ./src/index.ts",
