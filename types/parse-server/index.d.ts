@@ -1,7 +1,7 @@
 // This file contain duplicate types from Parse-Server that are not yet updated
 declare module "parse-server";
 
-declare namespace Parse {
+declare module "parse-server" {
     export namespace SchemaMigrations {
         export interface SchemaOptions {
             definitions: JSONSchema[];

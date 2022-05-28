@@ -1,3 +1,5 @@
+import { SchemaMigrations } from "parse-server";
 import UserSchema from "./User.schema";
 
-export const schemas: Parse.SchemaMigrations.JSONSchema[] = [UserSchema];
+// @ts-ignore
+export const schemas: SchemaMigrations.JSONSchema[] = [UserSchema];

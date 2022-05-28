@@ -1,4 +1,4 @@
-import { SchemaMigrations } from "parse";
+import { SchemaMigrations } from "parse-server";
 
 export default SchemaMigrations.makeSchema("_User", {
     fields: {

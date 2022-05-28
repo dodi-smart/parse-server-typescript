@@ -1846,17 +1846,17 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.60.tgz#35f3d6213daed95da7f0f73e75bcc6980e90597b"
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
 
-"@types/node@~16.4.13":
-  version "16.4.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.14.tgz#e27705ec2278b2355bd59f1952de23a152b9f208"
-  integrity sha512-GZpnVRNtv7sHDXIFncsERt+qvj4rzAgRQtnvzk3Z7OVNtThD2dHXYCMDNc80D5mv4JE278qo8biZCwcmkbdpqw==
+"@types/node@^16.4.13":
+  version "16.11.36"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.36.tgz#9ab9f8276987132ed2b225cace2218ba794fc751"
+  integrity sha512-FR5QJe+TaoZ2GsMHkjuwoNabr+UrJNRr2HNOo+r/7vhcuntM6Ee/pRPOnRhhL2XE9OOvX9VLEq+BcXl3VjNoWA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/parse@~2.18.14":
+"@types/parse@^2.18.14":
   version "2.18.15"
   resolved "https://registry.yarnpkg.com/@types/parse/-/parse-2.18.15.tgz#80df04b844770ef81253d1c30c12377702b7bc57"
   integrity sha512-GlpNTbnG4j/QaauMbjoWe2FGAliQMJeXc3Q9lktXc7zfbBWAsiImLXYOuDHapJT6YecKH/10Jf0e0zJIqCZU/Q==
@@ -4853,10 +4853,10 @@ graphql-ws@^5.4.1:
   resolved "https://registry.yarnpkg.com/graphql-ws/-/graphql-ws-5.8.1.tgz#daf72534b8a169a272e730fa4f3ce0e6d04e2883"
   integrity sha512-UVf/fxlHultC1+12tX9ShTIipqQFNZ96g7N51RFQlk7MFPsDUUMCR3QXVEzHEd5xlTp16rs5vCyfBljvcPN3fA==
 
-graphql@15.7.1, graphql@16.3.0, graphql@16.4.0:
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.4.0.tgz#bb10b1b4683045dedcb67000eb4ad134a36c59e6"
-  integrity sha512-tYDNcRvKCcfHREZYje3v33NSrSD/ZpbWWdPtBtUUuXx9NCo/2QDxYzNqCnMvfsrnbwRpEHMovVrPu/ERoLrIRg==
+graphql@15.7.1, graphql@16.3.0, graphql@16.5.0:
+  version "16.5.0"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.5.0.tgz#41b5c1182eaac7f3d47164fb247f61e4dfb69c85"
+  integrity sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -7435,7 +7435,7 @@ parse-json@^5.0.0, parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-server@~5.2.1:
+parse-server@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.2.1.tgz#e1a880ea64e18232a4b864a0e755af4b52e8b32d"
   integrity sha512-UMtmJsYfP4gvcBVXPU1gfPEMrh/S0SdRKvV3MLXxMzsTNBosltaj9ZRTq+Mb1EqPHEdOcW8nt1Bc7jx2XvT/eA==
@@ -7514,7 +7514,7 @@ parse@3.4.1:
   optionalDependencies:
     crypto-js "4.1.1"
 
-parse@~3.4.2:
+parse@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/parse/-/parse-3.4.2.tgz#17e417b41f4c785b347fd8734e7b7d75c226d5a7"
   integrity sha512-Ruehcp/S7eB3A0lDG5eAPvZHa5pABCbUR+lMJL2gUNKJLZNcD9/s3RL255PwI5jTqa+TCJ7MdPqobUplouN1pQ==
