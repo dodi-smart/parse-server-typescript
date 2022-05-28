@@ -21,10 +21,10 @@ const parseServer = new ParseServer({
     verbose: verbose,
     loggerAdapter: logger,
     allowClientClassCreation: false,
-    migrations: {
+    schemas: {
         strict: true,
-        schemas: schemas,
-    },
+        definitions: schemas,
+    }
 });
 
 const graphqlServer = new ParseGraphQLServer(parseServer, { graphQLPath: config.GRAPHQL_MOUNT });
