@@ -1,6 +1,6 @@
-import { Migrations } from "parse";
+import { SchemaMigrations } from "parse";
 
-export default Migrations.makeSchema("_User", {
+export default SchemaMigrations.makeSchema("_User", {
     fields: {
         email: { type: "String" },
         authData: { type: "Object" },
@@ -18,14 +18,14 @@ export default Migrations.makeSchema("_User", {
         lastname: { lastname: 1 },
     },
     classLevelPermissions: {
-        ...Migrations.CLP.allow({
+        ...SchemaMigrations.CLP.allow({
             "*": ["create"],
             requiresAuthentication: ["update"],
         }),
-        ...Migrations.CLP.allow({
+        ...SchemaMigrations.CLP.allow({
             "role:Admin": ["update", "delete"],
         }),
-        ...Migrations.CLP.allow({
+        ...SchemaMigrations.CLP.allow({
             requiresAuthentication: ["find", "get", "count"],
         }),
         protectedFields: {

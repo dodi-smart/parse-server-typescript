@@ -2,7 +2,7 @@
 declare module "parse-server";
 
 declare namespace Parse {
-    export namespace Migrations {
+    export namespace SchemaMigrations {
         export interface SchemaOptions {
             definitions: JSONSchema[];
             strict: boolean | undefined;
