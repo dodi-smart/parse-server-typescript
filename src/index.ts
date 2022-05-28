@@ -2,7 +2,7 @@ import express from "express";
 import config from "./parse/config";
 import { dashboard } from "./parse/parse-dashboard";
 import { graphqlServer, parseServer } from "./parse/parse-server";
-import { displayEnvironment, filesCacheControl, requireHTTPS } from "./parse/express-utils";
+import { displayEnvironment, filesCacheControl, handleErrors, requireHTTPS } from "./parse/express-utils";
 import { Cloud, Jobs, Webhooks } from "./cloud/main";
 
 const start = () => {
@@ -19,7 +19,7 @@ const start = () => {
     Jobs.init();
     Webhooks.init(app);
 
-    app.listen(config.PORT, displayEnvironment);
+    app.listen(config.PORT, displayEnvironment).on("error", handleErrors);
 };
 
 start();

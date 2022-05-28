@@ -2,6 +2,10 @@ import config from "./config";
 import { NextFunction, Request, Response } from "express";
 import logger from "./logger";
 
+const handleErrors = (err: Error): void => {
+    logger.error(`💥 ${err}`);
+};
+
 const displayEnvironment = (): void => {
     // Display all environmental variables on start.
     logger.info("-------- Environmental Variables: ---------------------");
@@ -40,4 +44,4 @@ const filesCacheControl = (req: Request, res: Response, next: NextFunction): voi
     next();
 };
 
-export { displayEnvironment, requireHTTPS, filesCacheControl };
+export { displayEnvironment, handleErrors, requireHTTPS, filesCacheControl };
