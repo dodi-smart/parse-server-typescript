@@ -14,7 +14,6 @@ export default SchemaMigrations.makeSchema("_User", {
         clientKey: { type: "Object" },
     },
     indexes: {
-        type: { type: 1 },
         lastname: { lastname: 1 },
     },
     classLevelPermissions: {

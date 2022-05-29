@@ -1,7 +1,7 @@
 import config from "./config";
 import ParseServer, { ParseGraphQLServer } from "parse-server";
 import logger from "./logger";
-import { schemas } from "../schema";
+import { schemas } from "@/schema";
 
 const verbose = config.PARSE_LOG_VERBOSE || false,
     silent = config.PARSE_SILENT || false,
@@ -21,9 +21,9 @@ const parseServer = new ParseServer({
     verbose: verbose,
     loggerAdapter: logger,
     allowClientClassCreation: false,
-    schemas: {
+    schema: {
         strict: true,
-        definitions: schemas,
+        definitions: schemas
     }
 });
 

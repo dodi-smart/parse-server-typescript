@@ -1,0 +1,10 @@
+{
+  "watch": ["src"],
+  "ext": "js,json,ts",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "node -r ts-node/register --trace-warnings ./src/index.ts",
+  "env": {
+    "NODE_ENV": "development",
+    "TS_NODE_FILES": true
+  }
+}
