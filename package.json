@@ -2,7 +2,7 @@
     "name": "parse-server-typescript",
     "version": "1.0.0",
     "description": "Parse Server using Typescript",
-    "main": "index.js",
+    "main": "./dist/src/index.js",
     "private": true,
     "license": "MIT",
     "repository": {
