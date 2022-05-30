@@ -9,10 +9,22 @@
         "type": "git",
         "url": "https://github.com/dodi-smart/parse-server-typescript.git"
     },
+    "scripts": {
+        "dev": "yarn build && nodemon",
+        "dev:debug": "nodemon --inspect",
+        "lint": "eslint ./ --ext .ts,.js",
+        "build": "tsc",
+        "start": "node dist/src/index.js",
+        "unit": "jest --config tests/unit/jest.config.js",
+        "integration": "PARSE_SILENT=true ./tests/run_integration_tests.sh",
+        "test": "yarn lint && yarn build && yarn unit && yarn integration",
+        "coverage": "nyc --silent yarn integration && nyc report"
+    },
     "dependencies": {
         "dotenv": "^16.0.0",
         "express": "^4.18.1",
         "graphql": "16.5.0",
+        "module-alias": "^2.2.2",
         "parse-dashboard": "^4.1.1",
         "parse-server": "^5.2.1"
     },
@@ -21,15 +33,15 @@
         "@types/jest": "^27.5.0",
         "@types/node": "^16.4.13",
         "@types/parse": "^2.18.14",
-        "@types/throng": "^5.0.3",
         "@typescript-eslint/eslint-plugin": "^5.22.0",
         "@typescript-eslint/parser": "^5.22.0",
         "babel-eslint": "^10.1.0",
+        "babel-watch": "7.7.0",
         "eslint": "^8.15.0",
         "eslint-plugin-import": "^2.26.0",
         "jest": "^28.1.0",
+        "nodemon": "^2.0.16",
         "nyc": "^15.1.0",
-        "parse": "^3.4.2",
         "ts-jest": "^28.0.2",
         "ts-loader": "^9.3.0",
         "ts-node": "^10.7.0",
@@ -38,18 +50,12 @@
     "resolutions": {
         "graphql": "16.5.0"
     },
-    "scripts": {
-        "dev": "TS_NODE_FILES=true node --require ts-node/register --trace-warnings ./src/index.ts",
-        "lint": "eslint src --ext .ts",
-        "build": "tsc -p .",
-        "start": "node dist/src/index.js",
-        "unit": "jest --config tests/unit/jest.config.js",
-        "integration": "PARSE_SILENT=true ./tests/run_integration_tests.sh",
-        "test": "yarn lint && yarn build && yarn unit && yarn integration",
-        "coverage": "nyc --silent yarn integration && nyc report"
-    },
     "engines": {
         "node": "16",
+        "npm": "please-use-yarn",
         "yarn": "1.22"
+    },
+    "_moduleAliases": {
+      "@": "dist/src"
     }
 }
