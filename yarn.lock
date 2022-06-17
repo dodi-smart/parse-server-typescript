@@ -817,14 +817,14 @@
   dependencies:
     tslib "~2.3.0"
 
-"@graphql-tools/utils@8.6.5", "@graphql-tools/utils@^8.5.1", "@graphql-tools/utils@^8.6.2":
+"@graphql-tools/utils@8.6.5":
   version "8.6.5"
   resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-8.6.5.tgz#ac04571b03f854c7a938b2ab700516a6c6d32335"
   integrity sha512-mjOtaWiS2WIqRz/cq5gaeM3sVrllcu2xbtHROw1su1v3xWa3D3dKgn8Lrl7+tvWs5WUVySsBss/VZ3WdoPkCrA==
   dependencies:
     tslib "~2.3.0"
 
-"@graphql-tools/utils@8.6.9", "@graphql-tools/utils@^8.6.5":
+"@graphql-tools/utils@8.6.9", "@graphql-tools/utils@^8.5.1", "@graphql-tools/utils@^8.6.2", "@graphql-tools/utils@^8.6.5":
   version "8.6.9"
   resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-8.6.9.tgz#fe1b81df29c9418b41b7a1ffe731710b93d3a1fe"
   integrity sha512-Z1X4d4GCT81+8CSt6SgU4t1w1UAUsAIRb67mI90k/zAs+ArkB95iE3bWXuJCUmd1+r8DGGtmUNOArtd6wkt+OQ==
@@ -2684,7 +2684,7 @@ body-parser@1.19.1:
     raw-body "2.4.2"
     type-is "~1.6.18"
 
-body-parser@1.19.2, body-parser@^1.18.3:
+body-parser@1.19.2:
   version "1.19.2"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.19.2.tgz#4714ccd9c157d44797b8b5607d72c0b89952f26e"
   integrity sha512-SAAwOxgoCKMGs9uUAUFHygfLAyaniaoun6I8mFY9pRAJL9+Kec34aU+oIjDhTycub1jozEfEwx1W1IuOYxVSFw==
@@ -2700,7 +2700,7 @@ body-parser@1.19.2, body-parser@^1.18.3:
     raw-body "2.4.3"
     type-is "~1.6.18"
 
-body-parser@1.20.0:
+body-parser@1.20.0, body-parser@^1.18.3:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.0.tgz#3de69bd89011c11573d7bfee6a64f11b6bd27cc5"
   integrity sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==
@@ -4269,7 +4269,7 @@ express@4.17.2:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-express@4.17.3, express@^4.17.1:
+express@4.17.3:
   version "4.17.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.3.tgz#f6c7302194a4fb54271b73a1fe7a06478c8f85a1"
   integrity sha512-yuSQpz5I+Ch7gFrPCk4/c+dIBKlQUxtgwqzph132bsT6qhuzss6I8cLJQz7B3rFblzd6wtcI0ZbGltH/C4LjUg==
@@ -4305,7 +4305,7 @@ express@4.17.3, express@^4.17.1:
     utils-merge "1.0.1"
     vary "~1.1.2"
 
-express@^4.18.1:
+express@^4.17.1, express@^4.18.1:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.1.tgz#7797de8b9c72c857b9cd0e14a5eea80666267caf"
   integrity sha512-zZBcOX9TfehHQhtupq57OF8lFZ3UZi08Y97dwFCkD8p9d/d2Y3M+ykKcwaMDEL+4qyUolgBDX6AblpR3fL212Q==
@@ -7812,10 +7812,10 @@ parse-json@^5.0.0, parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-server@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.2.1.tgz#e1a880ea64e18232a4b864a0e755af4b52e8b32d"
-  integrity sha512-UMtmJsYfP4gvcBVXPU1gfPEMrh/S0SdRKvV3MLXxMzsTNBosltaj9ZRTq+Mb1EqPHEdOcW8nt1Bc7jx2XvT/eA==
+parse-server@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.2.2.tgz#230d6dc22dd409670b980fb04a9ae9fae05875fe"
+  integrity sha512-OJgyqD9lrENtQg69sqzK+xBPI5VKx5u96KfTGg0qaPhLA3zeQwiCx5ldotKhsuuV3C850ABIM6VvnGflX4rutg==
   dependencies:
     "@apollo/client" "3.5.8"
     "@apollographql/graphql-playground-html" "1.6.29"
