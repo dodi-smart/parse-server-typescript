@@ -1881,10 +1881,10 @@
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
-"@types/parse@2.18.15":
-  version "2.18.15"
-  resolved "https://registry.yarnpkg.com/@types/parse/-/parse-2.18.15.tgz#80df04b844770ef81253d1c30c12377702b7bc57"
-  integrity sha512-GlpNTbnG4j/QaauMbjoWe2FGAliQMJeXc3Q9lktXc7zfbBWAsiImLXYOuDHapJT6YecKH/10Jf0e0zJIqCZU/Q==
+"@types/parse@2.18.16":
+  version "2.18.16"
+  resolved "https://registry.yarnpkg.com/@types/parse/-/parse-2.18.16.tgz#d740fa5629e4668ee19db6180242be3649ba34f7"
+  integrity sha512-2qbF9xUlmXbagie2Y5l+r7jIHCrocSIJqeiDruNiGYSh7gaznAH23LaqRbbe6iuGYh/fw2cZgoHwlqI4DLUJWg==
   dependencies:
     "@types/node" "*"
 
