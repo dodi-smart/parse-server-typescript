@@ -39,7 +39,7 @@
         "babel-watch": "7.7.0",
         "eslint": "8.18.0",
         "eslint-plugin-import": "2.26.0",
-        "jest": "28.1.1",
+        "jest": "28.1.2",
         "nodemon": "2.0.18",
         "nyc": "15.1.0",
         "ts-jest": "28.0.5",
