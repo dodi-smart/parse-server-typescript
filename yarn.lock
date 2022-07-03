@@ -6363,10 +6363,10 @@ parent-module@^1.0.0:
   dependencies:
     callsites "^3.0.0"
 
-parse-dashboard@4.1.3:
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/parse-dashboard/-/parse-dashboard-4.1.3.tgz#66243773ef086f93fe51606d0e40ad2947050fd8"
-  integrity sha512-eKoeJRuqCtp0RxmDtmzz8S5I2lUYwZXNkCUwrgnteWtXsce6V/xvvJQJrfyd5dHG1yel06WulkISo+uaENjpvA==
+parse-dashboard@4.1.4:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/parse-dashboard/-/parse-dashboard-4.1.4.tgz#b385a2b374ae501da14df75983c9c20337e37210"
+  integrity sha512-E8mCf80BuKvD/k1T/8yp+VlojrqOn2b7SzRMusSui/6+HkSqa7oduFuwg6dPTzI+keaiG9tup9EaaorZtONukg==
   dependencies:
     "@babel/runtime" "7.18.3"
     bcryptjs "2.3.0"
@@ -6388,7 +6388,7 @@ parse-dashboard@4.1.3:
     otpauth "7.1.3"
     package-json "7.0.0"
     parse "3.4.2"
-    passport "0.6.0"
+    passport "0.5.3"
     passport-local "1.0.0"
     prismjs "1.28.0"
     prop-types "15.8.1"
@@ -6537,14 +6537,13 @@ passport-strategy@1.x.x:
   resolved "https://registry.yarnpkg.com/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
   integrity sha1-tVOaqPwiWj0a0XlHbd8ja0QPUuQ=
 
-passport@0.6.0:
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/passport/-/passport-0.6.0.tgz#e869579fab465b5c0b291e841e6cc95c005fac9d"
-  integrity sha512-0fe+p3ZnrWRW74fe8+SvCyf4a3Pb2/h7gFkQ8yTJpAO50gDzlfjZUZTO1k5Eg9kUct22OxHLqDZoKUWRHOh9ug==
+passport@0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/passport/-/passport-0.5.3.tgz#e69b46c9bb3290660bc2b3299330d78710b198cc"
+  integrity sha512-gGc+70h4gGdBWNsR3FuV3byLDY6KBTJAIExGFXTpQaYfbbcHCBlRRKx7RBQSpqEqc5Hh2qVzRs7ssvSfOpkUEA==
   dependencies:
     passport-strategy "1.x.x"
     pause "0.0.1"
-    utils-merge "^1.0.1"
 
 path-exists@^3.0.0:
   version "3.0.0"
@@ -8269,7 +8268,7 @@ util.promisify@^1.0.0:
     has-symbols "^1.0.1"
     object.getownpropertydescriptors "^2.1.1"
 
-utils-merge@1.0.1, utils-merge@^1.0.1:
+utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
