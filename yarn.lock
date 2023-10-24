@@ -3781,7 +3781,7 @@ graphql-tag@2.12.6:
   dependencies:
     tslib "^2.1.0"
 
-graphql@16.5.0, graphql@16.6.0:
+graphql@16.5.0, graphql@16.8.1:
   version "16.5.0"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.5.0.tgz#41b5c1182eaac7f3d47164fb247f61e4dfb69c85"
   integrity sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==
@@ -5853,10 +5853,10 @@ parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-server@5.5.5:
-  version "5.5.5"
-  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.5.5.tgz#9d4e5231de8e6aa8d1367c21eac5fc1e1f2c4470"
-  integrity sha512-zjfIWwecfyiOnERCaocVTGC4TLL0ZV86u7GuAd2uz3U1P6xUmVEkknxb4rUEfUMZkohk0iB73EmXrxgHreoAOQ==
+parse-server@5.5.6:
+  version "5.5.6"
+  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-5.5.6.tgz#40c04393ef8e80d9cd5a80214bb5a28d85bfacef"
+  integrity sha512-l4Mazxhctph21EaWZOgZERf7ouqL+yDLuP75JB2paCZoyiNUItElBwzn+PQtq3Sv3kTCz6FqySxLxY6IDDUwIA==
   dependencies:
     "@graphql-tools/merge" "8.4.1"
     "@graphql-tools/schema" "9.0.4"
@@ -5871,7 +5871,7 @@ parse-server@5.5.5:
     deepcopy "2.1.0"
     express "4.18.2"
     follow-redirects "1.15.2"
-    graphql "16.6.0"
+    graphql "16.8.1"
     graphql-list-fields "2.0.2"
     graphql-relay "0.10.0"
     graphql-tag "2.12.6"
