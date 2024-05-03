@@ -6,12 +6,13 @@ import { graphqlServer, parseServer } from "./parse/parse-server";
 import { displayEnvironment, filesCacheControl, handleErrors, requireHTTPS } from "./parse/express-utils";
 import { Cloud, Jobs, Webhooks } from "./cloud/main";
 
-const start = () => {
+const start = async () => {
     const app = express();
 
     app.use(requireHTTPS);
     app.use(filesCacheControl);
     app.use("/dashboard", dashboard);
+    await parseServer.start();
     app.use(config.MOUNT_PATH, parseServer.app);
 
     graphqlServer.applyGraphQL(app);
