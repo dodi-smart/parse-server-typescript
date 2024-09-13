@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "dotenv": "16.0.1",
-        "express": "4.19.2",
+        "express": "4.20.0",
         "graphql": "16.8.1",
         "module-alias": "2.2.2",
         "parse-dashboard": "4.1.4",
