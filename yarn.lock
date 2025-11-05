@@ -7087,10 +7087,10 @@ parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-parse-server@7.5.3:
-  version "7.5.3"
-  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-7.5.3.tgz#cdfe1b3b696ec3bd4908257328f9ca5eb9b4b35f"
-  integrity sha512-agZo1CmSqH9IN+kPvEC36bqBB8IJ9IMA9tUr/Ql3HsTFCqZkB312ZMkTIhJeYV97WzfFbkXrlVwDqocyp4tOYA==
+parse-server@7.5.4:
+  version "7.5.4"
+  resolved "https://registry.yarnpkg.com/parse-server/-/parse-server-7.5.4.tgz#a79c74491bfeab70892b96190e6e1ba479c31368"
+  integrity sha512-T2mxp7o2gGo5dLhUay7ENuvqcXet+GTOra/nzP0bgysSW+CloffNQQCqRn3wS1baWhLTaoZBYEIuuRItYiK3Fg==
   dependencies:
     "@apollo/server" "4.12.1"
     "@babel/eslint-parser" "7.27.5"
